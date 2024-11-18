@@ -15,6 +15,7 @@
 ​
 
 背景：基于FISCOBCOS提供的GoSDK，再次封装成了一个工具包，简化官方文档中的操作。
+参考文档：https://fisco-bcos-documentation.readthedocs.io/zh-cn/latest/docs/sdk/go_sdk/index.html
 
 ## 一，GoWEB项目创建：
 
