@@ -607,9 +607,10 @@ func TestAnnouncement(key *ecdsa.PrivateKey) {
 
 ​	**具体函数调用过程，只需要通过将各类型的私钥，转换成*ecdsa.PrivateKey类型的私钥，就可以调用SendCallByKey和SendTransactionByKey(将私钥作为参数传入就行)。**
 
-​	**详细内容见FISCOBCOS中的GoSDK操作---(搭建项目版本)，注意由于两个文档的目录结构不同，要注意函数在哪个包下。**
+​	**详细内容见FISCOBCOS中的GoSDK操作---(搭建项目版本) ，注意由于两个文档的目录结构不同，要注意函数在哪个包下。**
 
-
+FISCOBCOS中的GoSDK操作---(搭建项目版本):
+https://gitee.com/kkvb/fisco-go-sdk-demo
 
 ## 三，小结：
 
