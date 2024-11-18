@@ -12,7 +12,7 @@
 | -------- | -------------------- | ---------- | ------ | ----------------------- |
 | 文档创建 | 陈雅凯，高俭豪，谭俊 | 2024-11-16 | 1.0    | email:2040575063@qq.com |
 
-​
+​	
 
 背景：基于FISCOBCOS提供的GoSDK，再次封装成了一个工具包，简化官方文档中的操作。
 
@@ -225,9 +225,9 @@ contract Anonoucement {
 }
 ```
 
-![image-20241113221832674](https://gitee.com/kkvb/upload-images/raw/master/picGo.assets2/image-20241113221832674.png)
+![image-20241113221832674](https://gitee.com/kkvb/upload-images/raw/master/picGo.assets2/image-20241113221832674.png)	
 
-​
+​	
 
 （1）这里的abi要将其中的 " 替换成  \",可以打开一个记事本,放入abi,使用快捷键ctrl+f, 全部替换。
 
@@ -575,13 +575,13 @@ func TestAnnouncement(key *ecdsa.PrivateKey) {
 
 ![image-20241117144652978](https://gitee.com/kkvb/upload-images/raw/master/picGo.assets2/image-20241117144652978.png)
 
-​
+​	
 
 ​	（3）使用startTime,endTime进行查询：
 
 **注意事项**：
 
-**将byTimeRange的值赋值为true，将byUserID的值赋值为false**
+**将byTimeRange的值赋值为true，将byUserID的值赋值为false** 
 
 **endTime（终止时间）的设置要注意**
 
@@ -591,7 +591,7 @@ func TestAnnouncement(key *ecdsa.PrivateKey) {
 
 **注意事项**：
 
-**（1）将byTimeRange和byUserID的值赋值为true**
+**（1）将byTimeRange和byUserID的值赋值为true** 
 
 **（2）会根据UserID和startTime,endTime进行查询，把所有符合条件的值返回**
 
@@ -657,21 +657,3 @@ SendCall  (需要传入私钥) (作用：获取链上信息,注意：合约函�
 
 
 
-
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
