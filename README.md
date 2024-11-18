@@ -233,7 +233,7 @@ contract Anonoucement {
 
 ![image-20241111232005034](https://gitee.com/kkvb/upload-images/raw/master/picGo.assets2/image-20241111232005034.png)
 
-​		（2）也可以不用替换，直接将abi赋值给whole.Config.Fisco.Abi["contract1"]。(这里的"contract1"是一个map的键与settings配置文件中的保持一致) 换做其他的合约换成对应的 键 就好。
+​		（2）也可以不用替换，直接将abi赋值给whole.Config.Contract.Abi["contract1"]。(这里的"contract1"是一个map的键与settings配置文件中的保持一致) 换作其他的合约换成其他对应的 键 就好。
 
 
 
