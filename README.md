@@ -16,6 +16,8 @@
 
 背景：基于FISCOBCOS（v2.9.1）提供的GoSDK进行二次开发，再次封装成了一个工具包，简化官方文档中的操作。
 
+相关资源：https://gitee.com/kkvb/fiscobcos-go，       https://github.com/chenyakai/fiscobcos-go
+
 参考文档：https://fisco-bcos-documentation.readthedocs.io/zh-cn/latest/docs/sdk/go_sdk/index.html
 
 使用FiscoBcos官方工具库： https://github.com/FISCO-BCOS/go-sdk/tree/master-FISCO-BCOS-v2
