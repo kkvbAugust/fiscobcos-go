@@ -1,12 +1,12 @@
 package core
 
 import (
-	"fiscobcos-go/whole"
 	"fmt"
 	"github.com/FISCO-BCOS/go-sdk/abi"
 	"github.com/FISCO-BCOS/go-sdk/abi/bind"
 	"github.com/FISCO-BCOS/go-sdk/client"
 	"github.com/FISCO-BCOS/go-sdk/conf"
+	"github.com/chenyakai/fiscobcos-go/whole"
 	"github.com/ethereum/go-ethereum/common"
 	"log"
 	"strings"
