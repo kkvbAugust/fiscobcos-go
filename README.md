@@ -18,7 +18,7 @@
 
 参考文档：https://fisco-bcos-documentation.readthedocs.io/zh-cn/latest/docs/sdk/go_sdk/index.html
 
-参考工具库： https://github.com/FISCO-BCOS/go-sdk/tree/master-FISCO-BCOS-v2
+使用FiscoBcos官方工具库： https://github.com/FISCO-BCOS/go-sdk/tree/master-FISCO-BCOS-v2
 ## 一，GoWEB项目创建：
 
 1.新建项目：
