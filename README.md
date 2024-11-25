@@ -45,7 +45,10 @@
 
 **注意事项：**
 
-**fiscobcos-go在打包好的文件夹中寻找。导入之后会提示项目目录爆红，修改成自己的就好了**
+**可以通过go get -u github.com/chenyakai/fiscobcos-go拉取这个包。**
+
+
+**也可以把fiscobcos-go中的几个文件夹。导入之后会提示项目目录爆红，修改成自己的项目名称就好了（下面的文档只演示复制文件夹的方式。）**
 
 ![image-20241116204147217](https://gitee.com/kkvb/upload-images/raw/master/picGo.assets2/image-20241116204147217.png)
 
