@@ -16,7 +16,7 @@
 
 背景：基于FISCOBCOS（v2.9.1）提供的GoSDK进行二次开发，再次封装成了一个工具包，简化官方文档中的操作。
 
-相关资源：https://gitee.com/kkvb/fiscobcos-go，       https://github.com/chenyakai/fiscobcos-go
+相关资源：https://gitee.com/kkvb/fiscobcos-go，       https://github.com/kkvbAugust/fiscobcos-go
 
 参考文档：https://fisco-bcos-documentation.readthedocs.io/zh-cn/latest/docs/sdk/go_sdk/index.html
 
@@ -47,7 +47,7 @@
 
 **注意事项：**
 
-**可以通过go get -u github.com/chenyakai/fiscobcos-go拉取这个包。**
+**可以通过go get -u github.com/kkvbAugust/fiscobcos-go拉取这个包。**
 
 
 **也可以把fiscobcos-go中的几个文件夹。导入之后会提示项目目录爆红，修改成自己的项目名称就好了（下面的文档只演示复制文件夹的方式。）**
@@ -618,7 +618,7 @@ func TestAnnouncement(key *ecdsa.PrivateKey) {
 ​	**详细内容见FISCOBCOS中的GoSDK操作---(搭建项目版本) ，注意由于两个文档的目录结构不同，要注意函数在哪个包下。**
 
 FISCOBCOS中的GoSDK操作---(搭建项目版本):
-https://gitee.com/kkvb/fisco-go-sdk-demo
+https://gitee.com/kkvb/fisco-go-sdk-demo            https://github.com/kkvbAugust/fisco-go-sdk-demo
 
 ## 三，小结：
 
