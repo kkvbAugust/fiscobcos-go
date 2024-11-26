@@ -618,7 +618,7 @@ func TestAnnouncement(key *ecdsa.PrivateKey) {
 ​	**详细内容见FISCOBCOS中的GoSDK操作---(搭建项目版本) ，注意由于两个文档的目录结构不同，要注意函数在哪个包下。**
 
 FISCOBCOS中的GoSDK操作---(搭建项目版本):
-https://gitee.com/kkvb/fisco-go-sdk-demo            https://github.com/kkvbAugust/fisco-go-sdk-demo
+https://gitee.com/kkvb/fisco-go-sdk-demo，            https://github.com/kkvbAugust/fisco-go-sdk-demo
 
 ## 三，小结：
 
