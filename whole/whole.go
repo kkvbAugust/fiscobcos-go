@@ -1,6 +1,6 @@
 package whole
 
-import "github.com/chenyakai/fiscobcos-go/config"
+import "github.com/kkvbAugust/fiscobcos-go/config"
 
 var (
 	Config *config.Config

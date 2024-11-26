@@ -2,8 +2,8 @@ package core
 
 import (
 	"fmt"
-	"github.com/chenyakai/fiscobcos-go/config"
-	"github.com/chenyakai/fiscobcos-go/whole"
+	"github.com/kkvbAugust/fiscobcos-go/config"
+	"github.com/kkvbAugust/fiscobcos-go/whole"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
 	"log"

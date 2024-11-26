@@ -6,8 +6,8 @@ import (
 	"github.com/FISCO-BCOS/go-sdk/abi/bind"
 	"github.com/FISCO-BCOS/go-sdk/client"
 	"github.com/FISCO-BCOS/go-sdk/conf"
-	"github.com/chenyakai/fiscobcos-go/whole"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/kkvbAugust/fiscobcos-go/whole"
 	"log"
 	"strings"
 )

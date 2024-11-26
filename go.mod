@@ -1,4 +1,4 @@
-module github.com/chenyakai/fiscobcos-go
+module github.com/kkvbAugust/fiscobcos-go
 
 go 1.22.8
 
