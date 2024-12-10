@@ -44,9 +44,8 @@ func SendTransaction(name, method string, params ...interface{}) any {
 }
 
 // SendTransactionAndGetReceipt 发送交易并获取交易回执
-func SendTransactionAndGetReceipt(name, method string, receipt *types.Receipt, params ...interface{}) (any, *types.Receipt) {
-	var ok error
-	_, receipt, ok = whole.GoSdk.Contract[name].Transact(whole.GoSdk.Client.GetTransactOpts(), method, params...)
+func SendTransactionAndGetReceipt(name, method string, params ...interface{}) (any, *types.Receipt) {
+	_, receipt, ok := whole.GoSdk.Contract[name].Transact(whole.GoSdk.Client.GetTransactOpts(), method, params...)
 
 	if ok != nil {
 		fmt.Println("txError=>", ok)
@@ -125,9 +124,8 @@ func SendTransactionByKey(name, method string, privateKey *goecdsa.PrivateKey, p
 }
 
 // SendTransactionAndGetReceiptByKey 使用私钥发送交易,并获取交易回执
-func SendTransactionAndGetReceiptByKey(name, method string, receipt *types.Receipt, privateKey *goecdsa.PrivateKey, params ...interface{}) (any, *types.Receipt) {
-	var ok error
-	_, receipt, ok = whole.GoSdk.Contract[name].Transact(NewKeyedTransactor(privateKey), method, params...)
+func SendTransactionAndGetReceiptByKey(name, method string, privateKey *goecdsa.PrivateKey, params ...interface{}) (any, *types.Receipt) {
+	_, receipt, ok := whole.GoSdk.Contract[name].Transact(NewKeyedTransactor(privateKey), method, params...)
 
 	if ok != nil {
 		fmt.Println("txError=>", ok)
