@@ -16,7 +16,8 @@ import (
 *
 全局初始化client对象
 */
-func InitClient(path string) {
+
+func InitClient(path string) *client.Client {
 	configs, err := conf.ParseConfigFile(path)
 	if err != nil {
 		log.Fatal("resources.ParseConfigFile ERR==>", err)
@@ -30,6 +31,7 @@ func InitClient(path string) {
 	//开辟空间
 	whole.GoSdk.Contract = make(map[string]*bind.BoundContract)
 	fmt.Println("Client初始化完成")
+	return clientObj
 }
 
 /**
