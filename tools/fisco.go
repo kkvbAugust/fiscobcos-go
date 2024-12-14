@@ -1,6 +1,7 @@
 package tools
 
 import (
+	"context"
 	goecdsa "crypto/ecdsa"
 	"errors"
 	"fmt"
@@ -158,4 +159,26 @@ func SendCallByKey(name, method string, privateKey *goecdsa.PrivateKey, out inte
 		panic("SendCallByKey 获取链上信息失败")
 	}
 	return out
+}
+
+// GetLatestBlocks 获取最新区块信息
+func GetLatestBlocks(curBlockNumber int64) []types.Block {
+	var blocks []types.Block
+	client := whole.GoSdk.Client
+	highestNumber, err := client.GetBlockNumber(context.Background())
+	if err != nil {
+		fmt.Println("txError=>", err.Error())
+		return nil
+	}
+
+	for blockNumber := curBlockNumber + 1; blockNumber <= highestNumber; blockNumber++ {
+		var block *types.Block
+		block, err = client.GetBlockByNumber(context.Background(), blockNumber, true)
+		if err != nil {
+			fmt.Printf("Error getting block number %d: %v\n", blockNumber, err)
+			break
+		}
+		blocks = append(blocks, *block)
+	}
+	return blocks
 }
