@@ -11,6 +11,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/kkvbAugust/fiscobcos-go/whole"
+	"github.com/sirupsen/logrus"
 	"strings"
 )
 
@@ -129,12 +130,14 @@ func SendTransactionAndGetReceiptByKey(name, method string, privateKey *goecdsa.
 	_, receipt, ok := whole.GoSdk.Contract[name].Transact(NewKeyedTransactor(privateKey), method, params...)
 
 	if ok != nil {
-		fmt.Println("txError=>", ok)
+		//fmt.Println("txError=>", ok)
+		logrus.Errorln("txError=>", ok.Error())
 		panic("SendTransactionAndGetReceiptByKey 发送交易失败")
 	}
 	json, wrong := abi.JSON(strings.NewReader(whole.Config.Contract[name].Abi))
 	if wrong != nil {
-		fmt.Println("wrong==>", wrong)
+		//fmt.Println("wrong==>", wrong)
+		logrus.Errorln("wrong==>", wrong.Error())
 		panic("解析abi失败")
 	}
 
@@ -144,7 +147,8 @@ func SendTransactionAndGetReceiptByKey(name, method string, privateKey *goecdsa.
 	//合约方法名
 	task := json.Unpack(&result, method, common.FromHex(receipt.Output))
 	if task != nil {
-		fmt.Println("task==>", task)
+		//fmt.Println("task==>", task)
+		logrus.Errorln("task==>", task.Error())
 		panic("解析函数返回值失败")
 	}
 	return *result, receipt
@@ -155,7 +159,9 @@ func SendCallByKey(name, method string, privateKey *goecdsa.PrivateKey, out inte
 	clientCallOpts := &bind.CallOpts{From: NewKeyedTransactor(privateKey).From}
 	err := whole.GoSdk.Contract[name].Call(clientCallOpts, out, method, params...)
 	if err != nil {
-		fmt.Println("SendCall err==>", err)
+		//fmt.Println("SendCall err==>", err)
+
+		logrus.Errorln("SendCall err==>", err.Error())
 		panic("SendCallByKey 获取链上信息失败")
 	}
 	return out
@@ -167,7 +173,8 @@ func GetLatestBlocks(curBlockNumber int64) []types.Block {
 	client := whole.GoSdk.Client
 	highestNumber, err := client.GetBlockNumber(context.Background())
 	if err != nil {
-		fmt.Println("txError=>", err.Error())
+		//fmt.Println("txError=>", err.Error())
+		logrus.Errorln("txError=>", err.Error())
 		return nil
 	}
 
@@ -175,7 +182,8 @@ func GetLatestBlocks(curBlockNumber int64) []types.Block {
 		var block *types.Block
 		block, err = client.GetBlockByNumber(context.Background(), blockNumber, true)
 		if err != nil {
-			fmt.Printf("Error getting block number %d: %v\n", blockNumber, err)
+			//fmt.Printf("Error getting block number %d: %v\n", blockNumber, err)
+			logrus.Errorf("Error getting block number %d: %v\n", blockNumber, err)
 			break
 		}
 		blocks = append(blocks, *block)
