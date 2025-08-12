@@ -241,9 +241,9 @@ contract Anonoucement {
 
 ​
 
-（1）这里的abi要将其中的 " 替换成  \",可以打开一个记事本,放入abi,使用快捷键ctrl+f, 全部替换。
+（1）这里的abi使用单引号将其包裹起来，填写到settings.yaml文件中。
 
-![image-20241111232005034](https://gitee.com/kkvb/upload-images/raw/master/picGo.assets2/image-20241111232005034.png)
+
 
 ​		（2）也可以不用替换，直接将abi赋值给whole.Config.Contract.Abi["contract1"]。(这里的"contract1"是一个map的键与settings配置文件中的保持一致) 换作其他的合约换成其他对应的 键 就好。
 
